@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
       let cards = data.filter(card => isInURL(card.id, window.location.href));
-      if (cards.length == 0) cards = data.sort(()=>Math.random()-0.5);
+      if (cards.length == 0) cards = data.sort(() => Math.random() - 0.5);
 
       for (let i = 0; i < cards.length; i ++){
         let card = cards[i];
