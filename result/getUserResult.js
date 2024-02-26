@@ -17,18 +17,19 @@ import getDescriptions from "./getDescription.js";
     let secondaryType = typeScore.indexOf(Math.max(...arr))+1;
     
     let pT = document.getElementById("primaryType");
-    let p = document.createElement("p");
-    p.innerHTML = `您的主要人格類型為： ${descriptions[primaryType].type}(${descriptions[primaryType].role})`;
-    pT.appendChild(p);
+    let pTRole = document.createElement("p");
+    pTRole.innerHTML = `您的主要人格類型為： ${descriptions[primaryType].type}(${descriptions[primaryType].role})`;
+    pT.appendChild(pTRole);
     
     let pTDescription = document.createElement("p");
     pTDescription.innerHTML = descriptions[primaryType].description;
     pT.appendChild(pTDescription);
 
     let sT = document.getElementById("secondaryType");
-    p = document.createElement("p");
-    p.innerHTML = `您的主要人格類型為： ${descriptions[secondaryType].type}(${descriptions[secondaryType].role})`;
-    sT.appendChild(p);
+    let sTRole = document.createElement("p");
+    sTRole = document.createElement("p");
+    sTRole.innerHTML = `您的主要人格類型為： ${descriptions[secondaryType].type}(${descriptions[secondaryType].role})`;
+    sT.appendChild(sTRole);
     
     let sTDescription = document.createElement("p");
     sTDescription.innerHTML = descriptions[primaryType].description;
