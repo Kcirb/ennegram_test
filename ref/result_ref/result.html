@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <link href="../styles/resultStyles.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="module" src="writeInterestCode.js"></script>
+        <script type="module" src="makeRadarChart.js"></script>
+        <script type="module" src="writeFittingJobs.js"></script>
+        <title>何倫碼測驗結果 – Meetype</title>
+    </head>
+    <body>
+        <div id="title"><h1>您的職業興趣（何倫碼）測驗結果</h1></div>
+        <div id="content">
+            <div class="result_block" id="score_block">
+                <div id="radar_chart_container">
+                    <canvas id="radarChartCanvas"></canvas>
+                </div>
+                <div  id="theme_code_top3">
+                    <h3>您前三高分的主題及代碼</h3>
+                </div>
+            </div>
+            <div class="result_block" id="top10_jobs">
+                <h3>最符合您興趣的職業Top10</h3>
+            </div>
+            <div class="result_block" id="theme_code_last">
+                <h3>您最低分的主題及相關職業</h3>
+            </div>
+            <div id="read_more_block" >
+                <h3>延伸閱讀</h3>
+                <h4>相關影片</h4>
+                <div id="related_articles">
+                    <ul>
+                        <li><a href="https://meetype.com/43268/careercounseling">要畢業了好焦慮？20到25歲的年輕人，最困擾的三個生涯疑問！生涯諮商會怎麼解答？</a></li>
+                    </ul>
+                </div>
+                <h4>相關影片</h4>
+                <div id="related_vids" style="text-align: center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_jr-jEtxYUE?si=LIbFwI_G2hhWZRvY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

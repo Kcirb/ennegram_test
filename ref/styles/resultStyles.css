@@ -1,0 +1,39 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+
+
+.result_block{
+    border-bottom: 2px solid gray;
+}
+
+#radar_chart_container {
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    border: 2px solid gray;
+    background-color: white;
+    
+}
+
+@media (max-width: 320px) {
+    #radar_chart_container {
+        margin: auto;
+        width: 100%;
+        
+    }
+}
+
+@media (min-width: 961px) {
+    body{
+        width: 80%;
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    #theme_code {
+        width: calc(100% - 400px);
+        
+    }
+}

@@ -1,0 +1,99 @@
+body{
+    width: 90%;
+    margin: auto;
+    /* background-color: #D0E5E8; */
+}
+
+/* 選項部分 */
+#checkboxContainer{
+    display: flex;
+    line-height: 2em;
+    flex-wrap: wrap;
+    font-size: 20px;
+    justify-content: left;
+}
+
+/* 選項容器 */
+.checkboxShell{
+    width: 32%;
+    padding: 2px;
+}
+
+@media (min-width: 960px) {
+    .checkboxShell{
+        width: 24%;
+        padding: 2px;
+    }
+}
+
+@media (max-width: 320px) {
+    .checkboxShell{
+        width: 48%;
+        padding: 2px;
+    }
+}
+
+/* 隱藏原本的勾選格 */
+.checkbox[type=checkbox] {
+    display: none;
+}
+
+/*  */
+.checkbox[type=checkbox] + label {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: white; 
+}
+
+.checkbox[type=checkbox]:checked + label{
+    background-color: #F8AB87; 
+    border-color: black;
+    color: #2D2D2D; 
+    font-weight: bold;
+}
+
+.function_button{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    color: white;
+    background-color: #2D2D2D;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+/* 預設display none來隱藏，用JS更改為flex來顯示。 */
+#popupBackground {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#popupContent {
+    background-color: #D0E5E8;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    animation: pop 0.25s ease-in-out;
+
+}
+@keyframes pop{
+    50%  {
+        transform: scale(1.15);
+    }
+}
