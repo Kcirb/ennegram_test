@@ -1,8 +1,7 @@
 (async ()=>{
     let response_des = await fetch('../cards/descriptions.json');
     let descriptions = await response_des.json();
-    
-    let descriptions = await getDescriptions();
+
     let response = await fetch('../cards/cards.json');
     let data = await response.json();
 

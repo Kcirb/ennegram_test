@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
         checkbox.id = `${card.id}`;
         checkbox.name = card.id;
         
+        checkbox.onchange = () => {
+          let checkedCheckboxes = document.querySelectorAll('.checkbox:checked');
+          document.getElementById('selectCounter').innerHTML = `您目前選擇的卡片張數為：${checkedCheckboxes.length} 張`
+        }
+        
         // 生成label
         const label = document.createElement('label');
         label.htmlFor = `${card.id}`;

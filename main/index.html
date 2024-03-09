@@ -3,14 +3,18 @@
     <head>
         <meta charset="UTF-16">
         <link href="../styles/mainStyles.css" rel="stylesheet" type="text/css" />
-        <script src="functions.js"></script>                 
+        <script src="../functions/writeInstruction.js"></script>              
+        <script src="../functions/closePopUp.js"></script>
+        <script src="../functions/selectLimit.js"></script>
         <script src="../functions/writeCheckbox.js"></script>
         <title>九型人格卡牌測驗 – Meetype</title>
     </head>
     <body>
         <div id="content">
-            <div id="description">
+            <div id="description" style="text-align: center;">
                 <h1>九型人格卡牌測驗</h1>
+                <p id="instruction"></p>
+                <p id="selectCounter"></p>
             </div>
             <div id="popupBackground">
                 <div id="popupContent">
@@ -20,7 +24,6 @@
             </div>
             <form method="get" id="mainForm" onsubmit="return selectLimit(20);">
                 <div id="checkboxContainer"></div>
-                <!-- 考慮使用disabled 標籤 -->
                 <input id="next_page_button" class="function_button" type="submit" value="送出"/>
             </form>
         </div>
