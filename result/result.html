@@ -4,6 +4,10 @@
         <meta charset="UTF-8"></meta>
         <link href="../styles/resultStyles.css" rel="stylesheet" type="text/css" />
         <script type="module" src="getUserResult.js"></script>
+        <script>
+            // 如果沒有query則跳轉回到測驗。    
+            if(!location.href.includes('ver')) location.href = "../main/index.html";
+        </script>
         <title>九型人格測驗結果 – Meetype</title>
     </head>
     <body>

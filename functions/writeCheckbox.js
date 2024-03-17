@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         checkbox.onchange = () => {
           let checkedCheckboxes = document.querySelectorAll('.checkbox:checked');
-          document.getElementById('selectCounter').innerHTML = `您目前選擇的卡片張數為：${checkedCheckboxes.length} 張`
+          document.getElementById('selectCounter').innerHTML = `您目前選擇的卡片張數為：${checkedCheckboxes.length} 張`;
         }
         
         // 生成label
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         label.htmlFor = `${card.id}`;
         label.appendChild(document.createTextNode(card.adj));
         
-        // 将checkbox和label添加到容器中
+        // 將checkbox和label添加到容器中
         checkboxShell.appendChild(checkbox);
         checkboxShell.appendChild(label);
       }
