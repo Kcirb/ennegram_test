@@ -1,4 +1,5 @@
 function selectLimit(limit){
+    console.log(window.location.href.includes('ver'));
     // 預設要選20個
     if (!limit) limit = 20;
 

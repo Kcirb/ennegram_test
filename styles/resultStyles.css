@@ -3,18 +3,20 @@ body{
     margin: auto;
 }
 
-
 .result_block{
     border-bottom: 2px solid gray;
 }
 
-#radar_chart_container {
+.barChartContainer {
     margin: auto;
-    width: 400px;
-    height: 300px;
+    width: 50%;
     border: 2px solid gray;
     background-color: white;
     
+}
+
+.typeImg {
+    width: 400px;
 }
 
 @media (max-width: 320px) {
