@@ -34,7 +34,7 @@ body{
 }
 
 /* 隱藏原本的勾選格 */
-.checkbox[type=checkbox] {
+.checkbox[type=checkbox]{
     display: none;
 }
 
@@ -96,4 +96,30 @@ body{
     50%  {
         transform: scale(1.15);
     }
+}
+
+#genderSelect {
+    display: flex;
+}
+
+input[type=radio]{
+    display: none;
+}
+
+input[type=radio] + label {
+    display: flex;
+    width: 50%;
+    margin: 0.5%;
+	justify-content: center;
+	align-items: center;
+    border: 2px solid;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: white; 
+}
+
+input[type=radio]:checked + label{
+    transition: 0.5s;
+    background-color: #F8AB87; 
 }

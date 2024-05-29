@@ -3,8 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('../cards/cards.json')
     .then(response => response.json())
     .then(data => {
-      let cards = data.filter(card => isInURL(card.id, window.location.href));
-      if (cards.length == 0) cards = data.sort(() => Math.random() - 0.5);
+      // 檢查URL，如有卡片的id則顯示
+      let urlParams = new URLSearchParams(window.location.search);
+      let cards = data.filter(card => urlParams.has(card.id));
+      // 如無query則顯示全部
+      if (cards.length == 0) cards = data;
 
       for (let i = 0; i < cards.length; i ++){
         let card = cards[i];
@@ -39,12 +42,3 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(error => console.error('Error loading JSON:', error));
 });
-
-function isInURL(id, url) {
-  // 如沒有指定url則使用網頁網址
-  if(!url) url = window.location.href;
-  var regex = new RegExp(id + '='),
-      results = regex.exec(url);
-  if (!results) return false;
-  return true;
-}

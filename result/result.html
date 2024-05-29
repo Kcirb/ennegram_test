@@ -22,24 +22,37 @@
                 <canvas id="centralBarChartCanvas"></canvas>
             </div>
             <div id="description">
-                <div id="primaryType" class="result_block">
-                    <h3>您的主要人格類型</h3>
-                    <div id="primaryTypeImgContainer"></div>
+                <div id="primaryType" class="personalityBlock">
+                    <div id="primaryTypeImgContainer" class="imgContainer"></div>
+                    <div id="primaryTypeRole" class="typeRoleText"></div>
+                    <div class="descriptionBlock">
+                        <p class="primary importanceText">主要</p>
+                        <div class="descriptionContent">
+                            <div id="primaryTypeDescr" class="descriptionContainer"></div>
+                            <h3>延伸閱讀</h3>
+                            <a id="primaryTypeArticle"></a>
+                        </div>
+                    </div>
                 </div>
-                <div id="secondaryType" class="result_block">
-                    <h3>您的次要人格類型</h3>
-                    <div id="secondaryTypeImgContainer"></div>
+                <div id="divider"></div>
+                <div id="secondaryType" class="personalityBlock">
+                    <div id="secondaryTypeImgContainer" class="imgContainer"></div>
+                    <div id="secondaryTypeRole" class="typeRoleText"></div>
+                    <div class="descriptionBlock">
+                        <p class="secondary importanceText">次要</p>
+                        <div class="descriptionContent">
+                            <div id="secondaryTypeDescr" class="descriptionContainer"></div>
+                            <h3>延伸閱讀</h3>
+                            <a id="secondaryTypeArticle"></a>
+                        </div>
+                    </div>
                 </div>
-                <div id="lowDiscriExplain" >
-                </div>
+                <div id="lowDiscriExplain"></div>
             </div>
             <div id="read_more_block" >
-                <h3>延伸閱讀</h3>
                 <div id="related_articles">
                     <h4>相關文章</h4>
                     <ul>
-                        <li id="primaryTypeArticle"></li>
-                        <li id="secondaryTypeArticle"></li>
                         <li><a href="https://meetype.com/topic/enneagram">九型人格相關文章</a></li>
                         <li><a href="https://meetype.com/enneagram-type-description">九型人格描述</a></li>
                     </ul>
