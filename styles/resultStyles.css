@@ -3,21 +3,23 @@ body{
     margin: auto;
 }
 
-
-/* .result_block{
-    border-bottom: 2px solid gray;
-} */
-
 .barChartContainer {
-    margin: auto;
-    width: 50%;
-    border: 2px solid gray;
+    margin: 10px;
+    border: 2px solid;
     background-color: white;
     
 }
 
 .typeImg {
-    max-height: 300px;
+    max-height: 50vh;
+}
+
+.titleImg {
+    height: 20px;
+}
+
+.heading {
+    text-align: center;
 }
 
 #description > .personalityBlock{
@@ -30,31 +32,26 @@ body{
     background-position: center;
     background-size: 150px 30px;
     width: auto;
-    height: 30px;
+    height: 60px;
     margin: 10px 0;
 }
 
-.typeRoleText {
+.gray-background {
     border: solid 2px;
     border-radius: 6px;
     background-color: #F2F1EF;
 }
-
-
 
 #primaryTypeRole {
     box-shadow: 0px 10px #D0E5E8;
 }
 
-#secondaryTypeRole {
+#typeRoleText {
     box-shadow: 0px 10px  #FFA78A;
 }
 
 .descriptionBlock {
     margin-top: 20px;
-    border: solid 2px;
-    border-radius: 6px;
-    background-color: #F2F1EF;
 }
 
 .importanceText {
@@ -74,43 +71,56 @@ body{
 }
 
 .descriptionContent {
+    height:auto;
     margin: 10px;
+    padding: 0 10px 10px;
     border: solid 2px;
     border-radius: 6px;
     background-color: #fefefe;
-}
-
-.descriptionContainer {
     text-align: left;
 }
 
-@media (max-width: 360px) {
-}
-
-@media (min-width: 961px) {
+@media (min-width: 768px) {
     body{
         width: 80%;
-        max-width: 1024px;
+        max-width: 1024;
         margin: auto;
     }
 
     #description {
+        margin-top: 30px;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
     }    
-
+    
     #description > .personalityBlock{
-        text-align: center;
         flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description .personalityBlock .descriptionBlock {
+        flex:1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description .personalityBlock .descriptionBlock .descriptionContent{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description .personalityBlock .descriptionBlock .descriptionContent .descriptionContainer{
+        flex:1;
     }
 
     #divider {
         height: auto;
-        width: 30px;
         background-image: url('../img/stars_verticle.png');
         background-size: 30px 150px;
-        margin: 0 10px;
+        margin: 0 30px;
         flex: 0 0 30px;
     }
 }

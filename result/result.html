@@ -14,37 +14,59 @@
         <title>九型人格測驗結果 – Meetype</title>
     </head>
     <body>
-        <div id="title"><h1>您的九型人格測驗結果</h1></div>
+        <div id="title"><h1 class="heading">您的九型人格測驗結果</h1></div>
         <div id="content">
-            <div class="barChartContainer">
-                <canvas id="typeBarChartCanvas"></canvas>
+            <div class="gray-background" style="margin: auto; width: 70%;">
+                <h2 class="heading">
+                <img src="/img/star.png" class="titleImg">
+                <img src="/img/star.png" class="titleImg">
+                    <img src="/img/star.png" class="titleImg">
+                    各個類型的分數
+                    <img src="/img/star.png" class="titleImg">
+                    <img src="/img/star.png" class="titleImg">
+                    <img src="/img/star.png" class="titleImg">
+                </h2>
+                <div class="barChartContainer">
+                    <div style="display: flex; text-align: center;">
+                        <p style="flex:1;">心中心</p>
+                        <p style="flex:1;">腦中心</p>
+                        <p style="flex:1;">腹中心</p>
+                    </div>
+                    <canvas id="typeBarChartCanvas"></canvas>
+                </div>
             </div>
-            <div class="barChartContainer">
-                <canvas id="centralBarChartCanvas"></canvas>
+            <!-- <div id="centreBarChart">
+                <div class="barChartContainer">
+                    <canvas id="centralBarChartCanvas"></canvas>
+                </div>
+            </div> -->
+            <div id="centreDescription">
+                <h2 class="heading">九型的三個中心</h2>
             </div>
             <div id="description">
+
                 <div id="primaryType" class="personalityBlock">
                     <div id="primaryTypeImgContainer" class="imgContainer"></div>
-                    <div id="primaryTypeRole" class="typeRoleText"></div>
-                    <div class="descriptionBlock">
+                    <div id="primaryTypeRole" class="gray-background"></div>
+                    <div class="descriptionBlock gray-background">
                         <p class="primary importanceText">主要</p>
                         <div class="descriptionContent">
                             <div id="primaryTypeDescr" class="descriptionContainer"></div>
-                            <h3>延伸閱讀</h3>
-                            <a id="primaryTypeArticle"></a>
+                            <p>延伸閱讀</p>
+                            <div id="primaryTypeArticle"></div>
                         </div>
                     </div>
                 </div>
                 <div id="divider"></div>
                 <div id="secondaryType" class="personalityBlock">
                     <div id="secondaryTypeImgContainer" class="imgContainer"></div>
-                    <div id="secondaryTypeRole" class="typeRoleText"></div>
-                    <div class="descriptionBlock">
-                        <p class="secondary importanceText">次要</p>
+                    <div id="secondaryTypeRole" class="typeRoleText gray-background"></div>
+                    <div class="descriptionBlock gray-background">
+                        <p class="secondary importanceText">輔助</p>
                         <div class="descriptionContent">
                             <div id="secondaryTypeDescr" class="descriptionContainer"></div>
-                            <h3>延伸閱讀</h3>
-                            <a id="secondaryTypeArticle"></a>
+                            <p>延伸閱讀</p>
+                            <div id="secondaryTypeArticle"></div>
                         </div>
                     </div>
                 </div>
