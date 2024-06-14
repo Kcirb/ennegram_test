@@ -1,3 +1,27 @@
+### 2024.06.05
+- 更新/styles/resultStyles.css
+- 更新/cards/centreDescription.json
+- 更新/result/writeBarChart.js
+- 更新/result/result.html
+- 更新/result/getUserResult.js
+- 更新/img/types資料夾的圖片
+### 2024.06.05
+- 更新/main/index.html
+    - 新增詢問性別的字串
+- 更新/styles/mainStyles.css
+- 更新/styles/resultStyles.css
+- 更新/cards/centreDescription.json
+- 更新/cards/description.json
+    - 新增文章連結、文章預覽內容
+- 更新/result/writeBarChart.js
+    - 調整barchart顏色和內容
+- 更新/result/result.html
+- 更新/result/getUserResult.js
+
+### 2024.05.29
+- /cards 下新增了centreDescription.json，用來記錄三個九型中心的介紹。
+- 更新/result/result.html，修正手機板無法正常顯示的問題
+
 ### 2024.05.29
 - 更新/img
     - 更新人物圖片

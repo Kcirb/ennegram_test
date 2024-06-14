@@ -22,7 +22,7 @@
     labels: ['二','三','四','五','六','七','八','九','一'],
     datasets: [
       {
-        label: "心中心",
+        label: "人格分數",
         data: typeScore,
         backgroundColor: [
           'rgba(188, 233, 172)',
@@ -47,40 +47,24 @@
           'rgba(248, 171, 135)'
         ],
         borderWidth: 1,
-        borderRadius: 5,
-        borderSkipped: false
+        borderRadius: 5
       }],
     };
 
-    // // 長條圖資料和設定
-    // let centralBarChartData = {
-    // labels: ['心中心', '腦中心', '腹中心'],
-    // datasets: [{
-    //     label: "您的九型人格中心分數",
-    //     data: [
-    //       typeScore.slice(1,4).reduce((a,b)=>a+b),
-    //       typeScore.slice(4,7).reduce((a,b)=>a+b),
-    //       typeScore.slice(7,8).reduce((a,b)=>a+b)+typeScore[0]
-    //     ],
-    //     backgroundColor: [
-    //         'rgba(188, 233, 172, 0.4)',
-    //         'rgba(206, 230, 230, 0.4)',
-    //         'rgba(235, 64, 52, 0.4)',
-    //       ],
-    //       borderColor: [
-    //         'rgba(188, 233, 172)',
-    //         'rgba(206, 230, 230)',
-    //         'rgba(235, 64, 52)',
-    //       ],
-    //     borderWidth: 1
-    //   }],
-    // };
 
   let options = {
     scales: {
+      x: {
+        grid: {
+          display: false
+        }
+      },
       y: {
-        max: 20,
-        beginAtZero: true
+        max: 10,
+        beginAtZero: true,
+        grid: {
+          display: false
+        },
       },
 
     },
@@ -99,13 +83,4 @@
     options: options
   });
 
-// 中心長條圖
-//   const centralBarChartContainer = document.getElementById('centralBarChartCanvas');
-  
-//   // 創建各中心長條圖
-//   const centralBarChart = new Chart(centralBarChartContainer, {
-//     type: 'bar',
-//     data: centralBarChartData,
-//     options: options
-//   });
 })();

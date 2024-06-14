@@ -28,9 +28,9 @@
     let torso = typeScore.slice(7,8).reduce((a,b)=>a+b)+typeScore[0];
     let centre = [heart, brain, torso].indexOf(Math.max(heart, brain, torso))
 
+    document.getElementById("centreDescriptionTitle").innerHTML = `${centreDescriptions[centre].name}`
     document.getElementById("centreDescription").innerHTML += `九型的三個中心，分別是心中心、腦中心、腹中心。這些中心分別對應於不同的內在驅力、身體位置、核心價值，以及關注點。`
-    document.getElementById("centreDescription").innerHTML += `這三型中，你的分數為心中心（${heart}）、腦中心（${brain}）、腹中心（${torso}）。<br><br>`
-    document.getElementById("centreDescription").innerHTML += `${centreDescriptions[centre].name}<br><br>`
+    document.getElementById("centreDescription").innerHTML += `這三型中，你的分數為心中心（${heart}）、腦中心（${brain}）、腹中心（${torso}）。最高分的中心為${centreDescriptions[centre].name}。<br><br>`
     document.getElementById("centreDescription").innerHTML += `${centreDescriptions[centre].description}<br>`
     
     // 找出最高分者為主要人格。
@@ -70,20 +70,40 @@
         document.getElementById('lowDiscriExplain').appendChild(lowDiscriExplain);
     }
 
+    // 各人格對應顏色
+    let colors = [
+        "#FFA78A",
+        "#99f577",
+        "#99f577",
+        "#99f577",
+        "#D0E5E8",
+        "#D0E5E8",
+        "#D0E5E8",
+        "#FFA78A",
+        "#FFA78A"
+    ]
+
+
     // 根據分數、卡片顯示主要人物圖
     let primaryTypeImg = document.createElement('img');
     primaryTypeImg.className = "typeImg";
     primaryTypeImg.src = `../img/types/type${primaryType+1}_${gender.charAt(0)}.png`;
     document.getElementById('primaryTypeImgContainer').append(primaryTypeImg);
+    // 根據人格調整背景顏色
+    document.getElementById('primaryTypeRole').style = `box-shadow: 0px 10px ${colors[primaryType]};`
+    document.getElementById('primaryTag').style = `background-color: ${colors[primaryType]};`
     
     // 根據分數、卡片顯示輔助人物圖
     let secondaryTypeImg = document.createElement('img');
     secondaryTypeImg.className = "typeImg";
     secondaryTypeImg.src = `../img/types/type${secondaryType+1}_${gender.charAt(0)}.png`;
     document.getElementById('secondaryTypeImgContainer').append(secondaryTypeImg);
+    // 根據人格調整背景顏色
+    document.getElementById('secondaryTypeRole').style = `box-shadow: 0px 10px ${colors[secondaryType]};`
+    document.getElementById('secondaryTag').style = `background-color: ${colors[secondaryType]};`
 
     // 顯示延伸閱讀以及前兩句
-    document.getElementById("primaryTypeArticle").innerHTML = `<p>${descriptions[primaryType].articlePreview}<p/><a href="${descriptions[primaryType].articleLink}">${descriptions[primaryType].type} 性格簡介</a>`;
-    document.getElementById("secondaryTypeArticle").innerHTML = `<p>${descriptions[secondaryType].articlePreview}<p/><a href="${descriptions[secondaryType].articleLink}">${descriptions[secondaryType].type} 性格簡介</a>`;
+    document.getElementById("primaryTypeArticle").innerHTML = `<p>${descriptions[primaryType].articlePreview}<a href="${descriptions[primaryType].articleLink}"> ...繼續閱讀</a><p/>`;
+    document.getElementById("secondaryTypeArticle").innerHTML = `<p>${descriptions[secondaryType].articlePreview}<a href="${descriptions[secondaryType].articleLink}"> ...繼續閱讀</a><p/>`;
 
 })();
