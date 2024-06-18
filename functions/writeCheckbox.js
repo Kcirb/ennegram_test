@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // 打亂選項(順序為 2a、3a、4a...2b、3b、4b...)
       let rearrangedData = []
-      for (let remainder = 0; remainder < 9; remainder++) {
+      for (let remainder = 0; remainder < 10; remainder++) {
         for (let i = 0; i < data.length; i+=10) {
           rearrangedData.push(data[i+remainder]);
         }
