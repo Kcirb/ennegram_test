@@ -7,6 +7,7 @@
 
 #### 顯示選擇的卡片
 - 更新/result/result.html
+- 更新/result/getUserResult.js
 - 更新/styles/resultStyles.css，
 
 #### 放大說明、手機板選項單行呈現
