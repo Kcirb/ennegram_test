@@ -16,10 +16,15 @@
     let cards = data.filter(card => urlParams.has(card.id));
     let gender = urlParams.get('gender');
     
-    // 計算各型分數
+    
+    // 顯示選擇的卡片並計算分數
     let typeScore = [0,0,0,0,0,0,0,0,0];
     cards.forEach(card => {
         typeScore[card.type-1]++;
+        let selectedCardsText = document.createElement('p');
+        selectedCardsText.innerHTML = card.adj;
+        selectedCardsText.className = "selectedCard";
+        document.getElementById('selectedCardsContainer').appendChild(selectedCardsText);
     });
 
     // 計算三中心最高分，按照心腦腹順序
@@ -37,6 +42,7 @@
     let arr = typeScore;
     let primaryTypeScore = Math.max(...arr);
     let primaryType = typeScore.indexOf(Math.max(...arr));
+    
     
     // 生成主要人格描述
     let pTRole = document.createElement("p");
