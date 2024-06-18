@@ -1,4 +1,19 @@
-### 2024.06.05
+### 2024.06.18
+- 更新/cards/cards.js，修正編號錯誤
+
+#### 打散選項
+- 更新/main/index.js
+- 更新/functions/writeCheckbox.js，
+
+#### 顯示選擇的卡片
+- 更新/result/result.html
+- 更新/styles/resultStyles.css，
+
+#### 放大說明、手機板選項單行呈現
+- 更新/styles/mainStyles.css，
+
+---
+### 2024.06.12
 - 更新/styles/resultStyles.css
 - 更新/cards/centreDescription.json
 - 更新/result/writeBarChart.js
