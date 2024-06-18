@@ -5,9 +5,19 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(data => {
       // 檢查URL，如有卡片的id則顯示
       let urlParams = new URLSearchParams(window.location.search);
-      let cards = data.filter(card => urlParams.has(card.id));
+
+      // 打亂選項(順序為 2a、3a、4a...2b、3b、4b...)
+      let rearrangedData = []
+      for (let remainder = 0; remainder < 9; remainder++) {
+        for (let i = 0; i < data.length; i+=10) {
+          rearrangedData.push(data[i+remainder]);
+        }
+      }
+
+      let cards = rearrangedData.filter(card => urlParams.has(card.id));
       // 如無query則顯示全部
-      if (cards.length == 0) cards = data;
+      if (cards.length == 0) cards = rearrangedData;
+      
 
       for (let i = 0; i < cards.length; i ++){
         let card = cards[i];
@@ -33,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // 生成label
         const label = document.createElement('label');
         label.htmlFor = `${card.id}`;
-        label.appendChild(document.createTextNode(card.adj));
+        // label.appendChild(document.createTextNode(card.adj));
+        label.appendChild(document.createTextNode(card.id));
         
         // 將checkbox和label添加到容器中
         checkboxShell.appendChild(checkbox);
