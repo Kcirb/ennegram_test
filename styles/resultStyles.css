@@ -120,4 +120,21 @@ body{
         margin: 0 30px;
         flex: 0 0 30px;
     }
+
+    #selectedCardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .selectedCard {
+        width: 24%;
+        font-size: 20px;
+        line-height: 2em;
+        border: 2px solid;
+        border-radius: 10px;
+        margin: 2px auto;
+        background-color: #F8AB87;
+        font-weight: bold;
+    }
 }

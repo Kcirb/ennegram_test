@@ -4,6 +4,10 @@ body{
     /* background-color: #D0E5E8; */
 }
 
+#instruction{
+    font-size: 1.5em;
+}
+
 /* 選項部分 */
 #checkboxContainer{
     display: flex;
@@ -26,9 +30,9 @@ body{
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
     .checkboxShell{
-        width: 48%;
+        width: 100%;
         padding: 2px;
     }
 }

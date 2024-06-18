@@ -43,8 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // 生成label
         const label = document.createElement('label');
         label.htmlFor = `${card.id}`;
-        // label.appendChild(document.createTextNode(card.adj));
-        label.appendChild(document.createTextNode(card.id));
+        label.appendChild(document.createTextNode(card.adj));
         
         // 將checkbox和label添加到容器中
         checkboxShell.appendChild(checkbox);
