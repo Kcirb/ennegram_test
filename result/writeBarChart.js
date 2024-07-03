@@ -11,7 +11,7 @@
     let typeScore = [0,0,0,0,0,0,0,0,0];
 
     cards.forEach(card => {
-        typeScore[card.type-1]++;
+      typeScore = typeScore.map((score, type) => {return score + card.typeScore[type]});
     });
     
     typeScore.push(typeScore[0]);

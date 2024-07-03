@@ -1,3 +1,9 @@
+### 2024.07.03
+- 讓卡牌兼容多個人格類型
+    - 更新/cards/cards.json
+    - 更新/result/getUserResult.js
+    - 更新/result/writeBarChart.js 
+
 ### 2024.06.18
 - 更新/cards/cards.js，修正編號錯誤
 

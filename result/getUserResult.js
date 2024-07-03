@@ -3,13 +3,13 @@
     let response = await fetch('../cards/descriptions.json');
     let descriptions = await response.json();
     
-    // 取得卡片資料並根據URL篩選
-    response = await fetch('../cards/cards.json');
-    let data = await response.json();
-    
     // 取得各中心描述
     response = await fetch('../cards/centreDescriptions.json');
     let centreDescriptions = await response.json();
+    
+    // 取得卡片資料並根據URL篩選
+    response = await fetch('../cards/cards.json');
+    let data = await response.json();
 
     // 檢查URL，計算選擇的卡片以及性別。
     let urlParams = new URLSearchParams(window.location.search);
@@ -20,12 +20,13 @@
     // 顯示選擇的卡片並計算分數
     let typeScore = [0,0,0,0,0,0,0,0,0];
     cards.forEach(card => {
-        typeScore[card.type-1]++;
+        typeScore = typeScore.map((score, type) => {return score + card.typeScore[type]});
         let selectedCardsText = document.createElement('p');
         selectedCardsText.innerHTML = card.adj;
         selectedCardsText.className = "selectedCard";
         document.getElementById('selectedCardsContainer').appendChild(selectedCardsText);
     });
+    console.log(typeScore);
 
     // 計算三中心最高分，按照心腦腹順序
     let heart = typeScore.slice(1,4).reduce((a,b)=>a+b);
