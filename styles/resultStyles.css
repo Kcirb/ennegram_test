@@ -1,0 +1,140 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+
+.barChartContainer {
+    margin: 10px;
+    border: 2px solid;
+    background-color: white;
+    
+}
+
+.typeImg {
+    max-width: 200px;
+}
+
+.titleImg {
+    height: 1em;
+}
+
+.heading {
+    text-align: center;
+}
+
+#description > .personalityBlock{
+    text-align: center;
+}
+
+#divider {
+    background-image: url('../img/stars_horizontal.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px 30px;
+    width: auto;
+    height: 60px;
+    margin: 10px 0;
+}
+
+.gray-background {
+    border: solid 2px;
+    border-radius: 6px;
+    background-color: #F2F1EF;
+}
+
+#primaryTypeRole {
+    box-shadow: 0px 10px #D0E5E8;
+}
+
+#secondaryTypeRole {
+    box-shadow: 0px 10px  #FFA78A;
+}
+
+.descriptionBlock {
+    margin-top: 20px;
+}
+
+.importanceText {
+    border: solid 1px;
+    border-radius: 6px;
+    font-size: larger;
+    margin: 20px 30% 10px;
+    text-align: center;
+}
+
+.descriptionContent {
+    height:auto;
+    margin: 10px;
+    padding: 0 10px 10px;
+    border: solid 2px;
+    border-radius: 6px;
+    background-color: #fefefe;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    body{
+        width: 80%;
+        max-width: 1024;
+        margin: auto;
+    }
+    
+    #barChartBackground {
+        margin:auto;
+        width: 70%;
+    }
+
+    #description {
+        margin-top: 30px;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }    
+    
+    #description > .personalityBlock{
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description .personalityBlock .descriptionBlock {
+        flex:1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description .personalityBlock .descriptionBlock .descriptionContent{
+        flex:1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #description .personalityBlock .descriptionBlock .descriptionContent .descriptionContainer{
+        flex:1;
+    }
+
+    #divider {
+        height: auto;
+        background-image: url('../img/stars_verticle.png');
+        background-size: 30px 150px;
+        margin: 0 30px;
+        flex: 0 0 30px;
+    }
+
+    #selectedCardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .selectedCard {
+        width: 24%;
+        font-size: 20px;
+        line-height: 2em;
+        border: 2px solid;
+        border-radius: 10px;
+        margin: 2px auto;
+        background-color: #F8AB87;
+        font-weight: bold;
+    }
+}

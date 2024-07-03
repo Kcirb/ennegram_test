@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="../styles/resultStyles.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="module" src="getUserResult.js"></script>
+        <script type="module" src="writeBarChart.js"></script>
+        <script>
+            // 如果沒有query則跳轉回到測驗。    
+            if(!location.href.includes('ver')) location.href = "../main/index.html";
+        </script>
+        <title>九型人格測驗結果 – Meetype</title>
+    </head>
+    <body>
+        <div id="title"><h1 class="heading">您的九型人格測驗結果</h1></div>
+        <div id="content">
+            <div class="gray-background" id="barChartBackground">
+                <h2 class="heading">各個類型的分數</h2>
+                <div class="barChartContainer">
+                    <div style="display: flex; text-align: center;">
+                        <p style="flex:1;">心中心</p>
+                        <p style="flex:1;">腦中心</p>
+                        <p style="flex:1;">腹中心</p>
+                    </div>
+                    <canvas id="typeBarChartCanvas"></canvas>
+                </div>
+            </div>
+            <div id="centreDescription">
+                <h2 id="centreDescriptionTitle" class="heading">九型的三個中心</h2>
+            </div>
+            <div id="description">
+
+                <div id="primaryType" class="personalityBlock">
+                    <div id="primaryTypeImgContainer" class="imgContainer"></div>
+                    <div id="primaryTypeRole" class="gray-background"></div>
+                    <div class="descriptionBlock gray-background">
+                        <p id="primaryTag" class="importanceText">主要</p>
+                        <div class="descriptionContent">
+                            <div id="primaryTypeDescr" class="descriptionContainer"></div>
+                            <p>延伸閱讀</p>
+                            <div id="primaryTypeArticle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="divider"></div>
+                <div id="secondaryType" class="personalityBlock">
+                    <div id="secondaryTypeImgContainer" class="imgContainer"></div>
+                    <div id="secondaryTypeRole" class="gray-background"></div>
+                    <div class="descriptionBlock gray-background">
+                        <p id="secondaryTag" class="importanceText">輔助</p>
+                        <div class="descriptionContent">
+                            <div id="secondaryTypeDescr" class="descriptionContainer"></div>
+                            <p>延伸閱讀</p>
+                            <div id="secondaryTypeArticle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="lowDiscriExplain"></div>
+            </div>
+            <h2 class="heading">您選擇的卡牌</h2>
+            <div id="selectedCardsContainer">
+            </div>
+            <div id="read_more_block" >
+                <div id="related_articles">
+                    <h4>相關文章</h4>
+                    <ul>
+                        <li><a href="https://meetype.com/topic/enneagram">九型人格相關文章</a></li>
+                        <li><a href="https://meetype.com/enneagram-type-description">九型人格描述</a></li>
+                    </ul>
+                </div>
+                <div id="other_tests">
+                    <h4>其他測驗</h4>
+                    <ul>
+                        <li><a href="https://meetype.com/enneagram-test">深度版九型人格測驗</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
